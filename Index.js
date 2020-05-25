@@ -52,13 +52,9 @@ const getEmployee = () => {
 
 }
 
-function managerQuestion() {
-    getEmployee()
-        .then(officeNumber())
-}
 
 function init() {
-    managerQuestion()
+    getEmployee()
         .then(generatePage)
 
         .then(pageProfile => {

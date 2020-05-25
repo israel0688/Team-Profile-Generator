@@ -1,6 +1,4 @@
-module.exports = templateData => {
-    // destructure page data by section
-    const { projects, about, ...header } = templateData;
+function generatePage(data) {
   
     return `
     <!DOCTYPE html>
@@ -45,10 +43,12 @@ module.exports = templateData => {
 
       </main>
       <footer class="container text-center py-3">
-        <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${header.name}</h3>
+        <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${this.name}</h3>
       </footer>
     </body>
    
     </html>
     `;
   };
+
+  module.exports = generatePage;
